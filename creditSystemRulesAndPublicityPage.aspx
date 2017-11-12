@@ -91,14 +91,23 @@
 				</div>
 			</div>
 			<div id="main">
-				<asp:GridView ID="creditSystemRulesAndPublicityGridView" runat="server" AutoGenerateColumns="False" Width="651px">
+				<asp:GridView ID="creditSystemRulesAndPublicityGridView" Width="100%" runat="server" AutoGenerateColumns="False">
                         <Columns>
-                            <asp:BoundField DataField="title" HeaderText="公告标题" />
-                            <asp:BoundField DataField="datetime" HeaderText="发布时间" />
+                            <asp:BoundField DataField="title" HeaderText="公告标题">
+                                <FooterStyle HorizontalAlign="Center" />
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="datetime" HeaderText="发布时间">
+                                <FooterStyle HorizontalAlign="Center" />
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
                             <asp:TemplateField ShowHeader="False">
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" CommandName="" Text="浏览" OnClick="LinkButton1_Click"></asp:LinkButton>
+                                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" CommandName="" Text="查看详情" OnClick="LinkButton1_Click"></asp:LinkButton>
                                 </ItemTemplate>
+                                <ItemStyle HorizontalAlign="Center" />
                             </asp:TemplateField>
                         </Columns>
                     </asp:GridView>

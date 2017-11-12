@@ -77,11 +77,6 @@
                         </th>
                     </tr>
                 </table>
-                
-                <br />
-                
-                <br />
-                
             </div>
         </div>
 		<div id="footer">
