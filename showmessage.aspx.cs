@@ -17,6 +17,7 @@ public partial class showmessage : System.Web.UI.Page
         String SqlStr = "Select article From announcement Where title = '" +(String)Session["name"] + "'";
         SqlCommand cmd = new SqlCommand(SqlStr, objConnection);
         Label1.Text = (String)cmd.ExecuteScalar();
+        Label4.Text = (String)Session["name"];
         objConnection.Close();
     }
 

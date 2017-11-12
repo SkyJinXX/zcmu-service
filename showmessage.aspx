@@ -91,6 +91,9 @@
 				</div>
 			</div>
 			<div id="main">
+                <div style="text-align:center;font-size:large">
+                    <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+                    </div>
                 <div class="content">
                     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                 </div>
