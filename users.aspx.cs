@@ -20,6 +20,10 @@ public partial class users : System.Web.UI.Page
             Response.Write("<script>alert('请先登录');window.location.href='backstageManagementPage.aspx'</script>");
 
         }
+        else
+        {
+            Label4.Text = (String)Session["username"];
+        }
         objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
     }
 
@@ -69,10 +73,8 @@ public partial class users : System.Web.UI.Page
             return "";
         }
     }
-
-
     
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void announce_button_Click(object sender, EventArgs e)
     {
         objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         objConnection.Open();
@@ -135,5 +137,11 @@ public partial class users : System.Web.UI.Page
         }
         
        
+    }
+
+    protected void logout_Click(object sender, EventArgs e)
+    {
+        Session["username"] = null;
+        Response.Redirect("home.aspx");
     }
 }

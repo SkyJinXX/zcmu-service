@@ -20,9 +20,33 @@
     background-size: cover;
 }
 
+#user {
+    width:auto;
+    height:auto;
+    float:right;
+    margin-top:2%;
+    margin-right:3%;
+}
+
+.log_out_button {
+    width: 50px;
+    height: 25px;
+    background-color: white;
+    color: #7D9EC0;
+    border: hidden;
+    transition-duration: 0.3s;
+    border-radius: 13px;
+}
+
+.log_out_button:hover{
+    background-color:palegoldenrod;
+    color:#8B8B83;
+    cursor:pointer;
+}
+
 #container {
     width: 78%;
-    min-height: 400px;
+    min-height: 350px;
     height: auto;
     margin: auto;
     background-color: #F5FFFA;
@@ -39,25 +63,72 @@
 .content {
     width: 40%;
     height: auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    border: 1px dashed #3A5FCD;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 25px;
     margin: auto;
+    margin-top:40px;
 }
 
 .content table{
-    width:300px;
+    width:auto;
     height:auto;
     text-align:center;
+    margin: auto;
 }
 
-.content table tr th{
-    width:100px;
-    height:50px;
-    text-align:center;
+.tableone tr th {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+}
+
+.tabletwo tr th {
+    width: 160px;
+    height: 50px;
+    text-align: center;
 }
 
 .box {
     border:1px solid cornflowerblue;
+}
+
+/*==== FileUpload  ====*/
+.FileUploadbox {
+    height: 20px;
+    width: 160px;
+    padding-bottom: 2px;
+    border: 1px solid #D1EEEE;
+    border-radius:4px;
+    background-color: #fff;
+}  
+/*== FileUpload hover ==*/  
+.FileUploadbox:hover{
+    cursor:pointer;
+    background-color:#ADD8E6
+}  
+
+#announce_button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    background-color: white;
+    border: 1px solid goldenrod;
+    padding: 10px 15px;
+    color: goldenrod;
+    border-radius: 5px;
+    width: 220px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+}
+
+#announce_button:hover {
+    background-color:burlywood;
+    color:white;
 }
 
 #footer {
