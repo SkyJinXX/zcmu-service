@@ -55,8 +55,12 @@
                 <table>
                     <tr>
                         <th>
-                            <asp:Button ID="announce_button" runat="server" Text="上传(Upload)" OnClick="announce_button_Click" />
-                            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="back" />
+                            <asp:Button ID="announce_button" CssClass="button" runat="server" Text="上传(Upload)" OnClick="announce_button_Click" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <asp:Button ID="backtohome" CssClass="button" runat="server" Text="回到首页" OnClick="backtohome_Click" />
                         </th>
                     </tr>
                 </table>
