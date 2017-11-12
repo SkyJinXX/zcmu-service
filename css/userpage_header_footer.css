@@ -201,6 +201,15 @@
     border-bottom-right-radius: 5px;
 }
 
+.linkbutton_style {
+    color: #104E8B;
+}
+
+.linkbutton_style:hover{
+    cursor:pointer;
+    color:#FF4040;
+}
+
 .clear{
 	clear:both;
 }
