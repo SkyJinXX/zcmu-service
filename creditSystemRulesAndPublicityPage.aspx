@@ -110,6 +110,7 @@
                                 <ItemStyle HorizontalAlign="Center" />
                             </asp:TemplateField>
                         </Columns>
+                        <RowStyle HorizontalAlign="Center" />
                     </asp:GridView>
 			</div>
 			<div class="clear"></div>
