@@ -105,8 +105,9 @@
                             </asp:BoundField>
                             <asp:TemplateField ShowHeader="False">
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" CommandName=""  Text="浏览" OnClick="LinkButton1_Click"></asp:LinkButton>
+                                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" CommandName=""  Text="查看详情" OnClick="LinkButton1_Click"></asp:LinkButton>
                                 </ItemTemplate>
+                                <ItemStyle HorizontalAlign="Center" />
                             </asp:TemplateField>
                         </Columns>
                         <RowStyle HorizontalAlign="Center" />
