@@ -194,7 +194,7 @@
         <div id="footer">
             <div id="footer_content1">
                 <p>
-                    Copyright ©1959-2017 浙江中医药大学 
+                    Copyright © 2017 浙江中医药大学 
                 </p>
             </div>
             <div id="footer_content2">

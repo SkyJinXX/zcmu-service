@@ -91,11 +91,11 @@
 				</div>
 			</div>
 			<div id="main">
-                <div style="text-align:center;font-size:large">
-                    <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
-                    </div>
+                <div style="text-align: center; margin-top: 20px">
+                    <asp:Label ID="Label4" runat="server" Text="Label" Style="font-size: x-large"></asp:Label>
+                </div>
                 <div class="content">
-                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="Label" style="font-size:large"></asp:Label>
                 </div>
 			</div>
 			<div class="clear"></div>
@@ -103,7 +103,7 @@
 		<div id="footer">
             <div id="footer_content1">
                 <p>
-                    Copyright ©1959-2017 浙江中医药大学 
+                    Copyright © 2017 浙江中医药大学 
                 </p>
             </div>
             <div id="footer_content2">
