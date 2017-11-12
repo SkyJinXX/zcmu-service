@@ -107,9 +107,9 @@
 .FileUploadbox:hover{
     cursor:pointer;
     background-color:#ADD8E6
-}  
+}
 
-#announce_button {
+.button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -126,9 +126,9 @@
     transition-duration: 0.25s;
 }
 
-#announce_button:hover {
-    background-color:burlywood;
-    color:white;
+.button:hover {
+    background-color: burlywood;
+    color: white;
 }
 
 #footer {

@@ -75,7 +75,7 @@ public partial class showmessage : System.Web.UI.Page
     }
 
 
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void download_Click(object sender, EventArgs e)
     {
         objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         objConnection.Open();

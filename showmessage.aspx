@@ -97,9 +97,9 @@
                 <div class="content">
                     <asp:Label ID="Label1" runat="server" Text="Label" style="font-size:large"></asp:Label>
                 </div>
-                <div  style="text-align: center; margin-top: 20px">
-                    <asp:Button ID="Button1" runat="server" Text="文档下载" OnClick="Button1_Click" style="height: 23px" />
-                    </div>
+                <div class="text_buttom">
+                    <asp:Button ID="download" runat="server" Text="文档下载" OnClick="download_Click" />
+                </div>
 			</div>
 			<div class="clear"></div>
 		</div>

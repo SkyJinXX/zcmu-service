@@ -7,3 +7,32 @@
     margin:auto;
     margin-top:4%;
 }
+
+.text_buttom {
+    text-align: center;
+    margin:auto;
+    margin-top: 40px;
+    margin-bottom:20px;
+}
+
+#download {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    background-color: white;
+    border: 1px solid goldenrod;
+    padding: 8px 10px;
+    color: goldenrod;
+    border-radius: 5px;
+    width: 200px;
+    cursor: pointer;
+    font-size: 10px;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+}
+
+#download:hover {
+    background-color: burlywood;
+    color: white;
+}
