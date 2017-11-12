@@ -15,10 +15,17 @@ public partial class showmessage : System.Web.UI.Page
     {
         objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         objConnection.Open();
-        String SqlStr = "Select article From announcement Where title = '" +(String)Session["name"] + "'";
+
+        String Sq = "Select documentname From announcement Where title = '" + (String)Session["name"] + "'";
+        SqlCommand cmd1 = new SqlCommand(Sq, objConnection);
+        String mm = (String)cmd1.ExecuteScalar();
+
+        String SqlStr = "Select article From announcement Where title = '" +(String)Session["name"] + "' and documentname='"+mm+"'";
         SqlCommand cmd = new SqlCommand(SqlStr, objConnection);
         Label1.Text = (String)cmd.ExecuteScalar();
         Label4.Text = (String)Session["name"];
+
+        
         objConnection.Close();
     }
 
