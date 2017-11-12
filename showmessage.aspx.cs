@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -21,6 +22,28 @@ public partial class showmessage : System.Web.UI.Page
         objConnection.Close();
     }
 
+
+    public void DownLoadFile(string FullFileName)
+    {
+        // 保存文件的虚拟路径
+        string Url = "announcement\\" + FullFileName;
+        // 保存文件的物理路径
+        string FullPath = HttpContext.Current.Server.MapPath(Url);
+        // 初始化FileInfo类的实例，作为文件路径的包装
+        FileInfo FI = new FileInfo(FullPath);
+        // 判断文件是否存在
+        if (FI.Exists)
+        {
+            // 将文件保存到本机
+            Response.Clear();
+            Response.AddHeader("Content-Disposition", "attachment;filename=" + Server.UrlEncode(FI.Name));
+            Response.AddHeader("Content-Length", FI.Length.ToString());
+            Response.ContentType = "application/octet-stream";
+            Response.Filter.Close();
+            Response.WriteFile(FI.FullName);
+            Response.End();
+        }
+    }
     protected void homePage_Click(object sender, EventArgs e)
     {
         Response.Redirect("home.aspx");
@@ -51,4 +74,15 @@ public partial class showmessage : System.Web.UI.Page
         Response.Redirect("backstageManagementPage.aspx");
     }
 
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
+        objConnection.Open();
+        String SqlStr = "Select documentname From announcement Where title = '" + (String)Session["name"] + "'";
+        SqlCommand cmd = new SqlCommand(SqlStr, objConnection);
+        String FullFileName = (String)cmd.ExecuteScalar();
+        objConnection.Close();
+        DownLoadFile(FullFileName);
+    }
 }
