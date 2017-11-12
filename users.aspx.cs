@@ -114,7 +114,7 @@ public partial class users : System.Web.UI.Page
                         String rr = GetWordContent(newFileName);
                         string t = DateTime.Now.ToString();
                         String SqlStr = "insert into announcement values ('" + TextBox1.Text + "','" +rr+ "','" + t + "', '"
-                           + (String)DropDownList1.SelectedValue + "')";
+                           + (String)DropDownList1.SelectedValue + "','"+strName+"')";
                         SqlCommand cmd = new SqlCommand(SqlStr, objConnection);
                         cmd.CommandText = SqlStr;
                         cmd.ExecuteScalar();
@@ -142,6 +142,11 @@ public partial class users : System.Web.UI.Page
     protected void logout_Click(object sender, EventArgs e)
     {
         Session["username"] = null;
+        Response.Redirect("home.aspx");
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
         Response.Redirect("home.aspx");
     }
 }

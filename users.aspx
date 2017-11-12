@@ -56,6 +56,7 @@
                     <tr>
                         <th>
                             <asp:Button ID="announce_button" runat="server" Text="上传(Upload)" OnClick="announce_button_Click" />
+                            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="back" />
                         </th>
                     </tr>
                 </table>
