@@ -53,10 +53,10 @@
                         <asp:Label ID="Label1" runat="server" Text="组织机构" CssClass="labelTitle"></asp:Label>
 					</div>
                     <div class="organization_item">
-                        <a href="#">学校收费领导小组</a>
+                        <a href="lingdao.aspx">学校收费领导小组</a>
                     </div>
                     <div class="organization_item">
-                        <a href="#">学校收费监督小组</a>
+                        <a href="jiandu.aspx">学校收费监督小组</a>
                     </div>
 				</div>
 				<div class="side_left_box">
@@ -67,8 +67,8 @@
                         <p class="pTitle">举报电话 </p>
 					    <p>校纪委: </p>
 					    <p>0571-86613530 </p>
-					    <p>校财务处: </p>
-					    <p>0571-86613792 </p>
+					    <p>校计财处: </p>
+					    <p>0571-86613578</p>
 					    <p>省物价局: </p>
 					    <p>12358</p>
                     </div>
@@ -85,8 +85,6 @@
                         <p>0571-86613525 </p>
                         <p>教育主管部门: </p>
                         <p>0571—88008918 </p>
-                        <p>联系人: </p>
-                        <p>林涛 </p>
                     </div>
 				</div>
 			</div>

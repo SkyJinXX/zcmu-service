@@ -1,0 +1,45 @@
+﻿.title {
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    border-bottom: 1px solid royalblue;
+    text-align: center;
+    padding-top: 20px;
+    /*background-color: #FFEBCD;*/
+}
+
+.content {
+    width: 90%;
+    min-height: 160px;
+    height: auto;
+    margin: auto;
+    border-bottom: 1px dashed royalblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*background-color: #FFF0F5;*/
+}
+
+.center{
+    margin-left:60px;
+}
+
+.conten_left {
+    width: auto;
+    height: 338px;
+    float: left;
+}
+
+.content_right {
+    width: 300px;
+    height: auto;
+    float: left;
+}
+
+.content_right table tr td{
+    font-size:medium;
+    padding-bottom:5px;
+}
+
+.content_footer{
+    clear:both;
+}

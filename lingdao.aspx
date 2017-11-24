@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="policiesAndRegulationsPage.aspx.cs" Inherits="policiesAndRegulations" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="lingdao.aspx.cs" Inherits="lingdao" %>
 
 <!DOCTYPE html>
 
@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link href="css/policiesAndRegulations.css" type="text/css" rel="stylesheet" />
+    <link href="css/lingdao.css" type="text/css" rel="stylesheet" />
     <link href="css/userpage_header_footer.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
@@ -89,27 +89,64 @@
 				</div>
 			</div>
 			<div id="main">
-				<asp:GridView ID="policiesAndRegulationsGridView" Width="100%" runat="server" AutoGenerateColumns="False">
-                        <Columns>
-                            <asp:BoundField DataField="title" HeaderText="公告标题">
-                                <FooterStyle HorizontalAlign="Center" />
-                                <HeaderStyle HorizontalAlign="Center" />
-                                <ItemStyle HorizontalAlign="Center" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="datetime" HeaderText="发布时间">
-                                <FooterStyle HorizontalAlign="Center" />
-                                <HeaderStyle HorizontalAlign="Center" />
-                                <ItemStyle HorizontalAlign="Center" />
-                            </asp:BoundField>
-                            <asp:TemplateField ShowHeader="False">
-                                <ItemTemplate>
-                                    <asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="false" CommandName=""  Text="查看详情" OnClick="LinkButton2_Click"></asp:LinkButton>
-                                </ItemTemplate>
-                                <ItemStyle HorizontalAlign="Center" />
-                            </asp:TemplateField>
-                        </Columns>
-                        <RowStyle HorizontalAlign="Center" />
-                    </asp:GridView>
+                <div class="title">
+                    <p style="font-size: x-large">教育收费工作领导小组</p>
+                </div>
+                <div class="content">
+                    <div class="center">
+                        <div>
+                            <p style="padding-bottom: 5px; font-size: large">组长：赵峰</p>
+                        </div>
+                        <div class="conten_left">
+                            <p style="padding-bottom: 5px; font-size: large">成员：</p>
+                        </div>
+                        <div class="content_right">
+                            <table>
+                                <tr>
+                                    <td>罗伟明（校长办公室）</td>
+                                </tr>
+                                <tr>
+                                    <td>马重阳（学生处）</td>
+                                </tr>
+                                <tr>
+                                    <td>袁墙（研究生院）</td>
+                                </tr>
+                                <tr>
+                                    <td>阮叶萍（人事处）</td>
+                                </tr>
+                                <tr>
+                                    <td>张翼宙（教务处）</td>
+                                </tr>
+                                <tr>
+                                    <td>温成平（科研室）</td>
+                                </tr>
+                                <tr>
+                                    <td>王辉（实验室与设备管理处）</td>
+                                </tr>
+                                <tr>
+                                    <td>陈义明（计财处）</td>
+                                </tr>
+                                <tr>
+                                    <td>张燕勤（后勤管理处）</td>
+                                </tr>
+                                <tr>
+                                    <td>严云良（工会）</td>
+                                </tr>
+                                <tr>
+                                    <td>黄建波（继续教育学院，成人教育学院）</td>
+                                </tr>
+                                <tr>
+                                    <td>王颖（国际教育学院）</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="content_footer">
+                            <p style="padding-bottom: 5px; font-size: large">
+                                领导小组下设办公室，办公室设在计财处，由陈义明兼任办公室主任
+                            </p>
+                        </div>
+                    </div>
+                </div>
 			</div>
 			<div class="clear"></div>
 		</div>

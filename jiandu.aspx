@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="policiesAndRegulationsPage.aspx.cs" Inherits="policiesAndRegulations" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="jiandu.aspx.cs" Inherits="jiandu" %>
 
 <!DOCTYPE html>
 
@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link href="css/policiesAndRegulations.css" type="text/css" rel="stylesheet" />
+    <link href="css/jiandu.css" type="text/css" rel="stylesheet" />
     <link href="css/userpage_header_footer.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
@@ -88,29 +88,47 @@
                     </div>
 				</div>
 			</div>
-			<div id="main">
-				<asp:GridView ID="policiesAndRegulationsGridView" Width="100%" runat="server" AutoGenerateColumns="False">
-                        <Columns>
-                            <asp:BoundField DataField="title" HeaderText="公告标题">
-                                <FooterStyle HorizontalAlign="Center" />
-                                <HeaderStyle HorizontalAlign="Center" />
-                                <ItemStyle HorizontalAlign="Center" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="datetime" HeaderText="发布时间">
-                                <FooterStyle HorizontalAlign="Center" />
-                                <HeaderStyle HorizontalAlign="Center" />
-                                <ItemStyle HorizontalAlign="Center" />
-                            </asp:BoundField>
-                            <asp:TemplateField ShowHeader="False">
-                                <ItemTemplate>
-                                    <asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="false" CommandName=""  Text="查看详情" OnClick="LinkButton2_Click"></asp:LinkButton>
-                                </ItemTemplate>
-                                <ItemStyle HorizontalAlign="Center" />
-                            </asp:TemplateField>
-                        </Columns>
-                        <RowStyle HorizontalAlign="Center" />
-                    </asp:GridView>
-			</div>
+            <div id="main">
+                <div class="title">
+                        <p style="font-size: x-large">教育收费工作监督小组</p>
+                    </div>
+                <div class="content">
+                    <div class="center">
+                        <div>
+                            <p style="padding-bottom: 5px; font-size: large">组长：陶其高（监察处，审计处）</p>
+                        </div>
+                        <div class="conten_left">
+                            <p style="padding-bottom: 5px; font-size: large">成员：</p>
+                        </div>
+                        <div class="content_right">
+                            <table>
+                                <tr>
+                                    <td>王斌艳（团委）</td>
+                                </tr>
+                                <tr>
+                                    <td>付国春（监察处，审计处）</td>
+                                </tr>
+                                <tr>
+                                    <td>余晶晶（计财处）</td>
+                                </tr>
+                                <tr>
+                                    <td>学生会主席</td>
+                                </tr>
+                                <tr>
+                                    <td>研究生会主席</td>
+                                </tr>
+                                <tr>
+                                    <td>学生会权益部部长</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="content_footer">
+                            <p style="padding-bottom: 5px; font-size: large">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 			<div class="clear"></div>
 		</div>
 		<div id="footer">
