@@ -92,10 +92,11 @@
                 <div style="text-align: center; margin-top: 20px">
                     <asp:Label ID="Label4" runat="server" Text="Label" Style="font-size: x-large"></asp:Label>
                 </div>
-                <div class="content">
-                    <asp:Label ID="Label1" runat="server" Text="Label" style="font-size:large"></asp:Label>
-                </div>
                 <div class="text_buttom">
+                    <asp:Button ID="btnWord" runat="server" Text="查看文档" CommandArgument="docx" OnClick="btnWord_Click"  />
+                    </div>
+                <div class="text_buttom">
+                    
                     <asp:Button ID="download" runat="server" Text="文档下载" OnClick="download_Click" />
                 </div>
 			</div>

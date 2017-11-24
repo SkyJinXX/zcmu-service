@@ -111,10 +111,11 @@ public partial class users : System.Web.UI.Page
                     {
                         FileUpload1.SaveAs(newFileName);
                         HttpContext.Current.Response.Write("<script>alert('文件已成功上传。');</script>");
-                        String rr = GetWordContent(newFileName);
+                       // String rr = GetWordContent(newFileName);
                         string t = DateTime.Now.ToString();
-                        String SqlStr = "insert into announcement values ('" + TextBox1.Text + "','" +rr+ "','" + t + "', '"
-                           + (String)DropDownList1.SelectedValue + "','"+strName+"')";
+                        string url= juedui + strName;
+                        String SqlStr = "insert into announcement values ('" + TextBox1.Text + "','" + t + "', '"
+                           + (String)DropDownList1.SelectedValue + "','"+ strName + "','"+ url + "')";
                         SqlCommand cmd = new SqlCommand(SqlStr, objConnection);
                         cmd.CommandText = SqlStr;
                         cmd.ExecuteScalar();

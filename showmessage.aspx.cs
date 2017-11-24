@@ -7,6 +7,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Microsoft.Office.Core;
+using Word = Microsoft.Office.Interop.Word;
 
 public partial class showmessage : System.Web.UI.Page
 {
@@ -16,16 +18,11 @@ public partial class showmessage : System.Web.UI.Page
         objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         objConnection.Open();
 
-        String Sq = "Select documentname From announcement Where title = '" + (String)Session["name"] + "'";
+        String Sq = "Select title From announcement Where title = '" + (String)Session["name"] + "'";
         SqlCommand cmd1 = new SqlCommand(Sq, objConnection);
-        String mm = (String)cmd1.ExecuteScalar();
+        String ming = (String)cmd1.ExecuteScalar();
 
-        String SqlStr = "Select article From announcement Where title = '" +(String)Session["name"] + "' and documentname='"+mm+"'";
-        SqlCommand cmd = new SqlCommand(SqlStr, objConnection);
-        Label1.Text = (String)cmd.ExecuteScalar();
-        Label4.Text = (String)Session["name"];
-
-        
+        Label4.Text = ming;
         objConnection.Close();
     }
 
@@ -91,5 +88,29 @@ public partial class showmessage : System.Web.UI.Page
         String FullFileName = (String)cmd.ExecuteScalar();
         objConnection.Close();
         DownLoadFile(FullFileName);
+    }
+
+    protected void btnWord_Click(object sender, EventArgs e)
+    {
+        objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
+        objConnection.Open();
+
+        String Sq = "Select path From announcement Where title = '" + (String)Session["name"] + "'";
+        SqlCommand cmd1 = new SqlCommand(Sq, objConnection);
+        String mm = (String)cmd1.ExecuteScalar();
+
+
+        objConnection.Close();
+
+        Button btn = sender as Button;
+        switch (btn.CommandArgument)
+        {
+            case "docx":
+                Office2HtmlHelper.Word2Html(mm, MapPath("/announcement/"), "max");
+                break;
+            default:
+                break;
+        }
+        Response.Redirect("announcement/max.html");
     }
 }
