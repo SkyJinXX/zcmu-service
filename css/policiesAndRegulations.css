@@ -1,2 +1,7 @@
-﻿body {
+﻿#main {
+    width: 100%;
+}
+
+#policiesAndRegulationsGridView {
+    margin-left: 5%;
 }

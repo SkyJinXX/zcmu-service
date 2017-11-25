@@ -96,8 +96,8 @@
                         <Columns>
                             <asp:BoundField DataField="title" HeaderText="公告标题">
                                 <FooterStyle HorizontalAlign="Center" />
-                                <HeaderStyle HorizontalAlign="Center" />
-                                <ItemStyle HorizontalAlign="Center" />
+                                <HeaderStyle HorizontalAlign="Left" />
+                                <ItemStyle HorizontalAlign="Left" />
                             </asp:BoundField>
                             <asp:BoundField DataField="datetime" HeaderText="发布时间">
                                 <FooterStyle HorizontalAlign="Center" />
@@ -121,8 +121,8 @@
                         <Columns>
                             <asp:BoundField DataField="title" HeaderText="公告标题">
                                 <FooterStyle HorizontalAlign="Center" />
-                                <HeaderStyle HorizontalAlign="Center" />
-                                <ItemStyle HorizontalAlign="Center" />
+                                <HeaderStyle HorizontalAlign="Left" />
+                                <ItemStyle HorizontalAlign="Left" />
                             </asp:BoundField>
                             <asp:BoundField DataField="datetime" HeaderText="发布时间">
                                 <FooterStyle HorizontalAlign="Center" />
@@ -146,8 +146,8 @@
                         <Columns>
                             <asp:BoundField DataField="title" HeaderText="公告标题">
                                 <FooterStyle HorizontalAlign="Center" />
-                                <HeaderStyle HorizontalAlign="Center" />
-                                <ItemStyle HorizontalAlign="Center" />
+                                <HeaderStyle HorizontalAlign="Left" />
+                                <ItemStyle HorizontalAlign="Left" />
                             </asp:BoundField>
                             <asp:BoundField DataField="datetime" HeaderText="发布时间">
                                 <FooterStyle HorizontalAlign="Center" />
@@ -171,8 +171,8 @@
                         <Columns>
                             <asp:BoundField DataField="title" HeaderText="公告标题">
                                 <FooterStyle HorizontalAlign="Center" />
-                                <HeaderStyle HorizontalAlign="Center" />
-                                <ItemStyle HorizontalAlign="Center" />
+                                <HeaderStyle HorizontalAlign="Left" />
+                                <ItemStyle HorizontalAlign="Left" />
                             </asp:BoundField>
                             <asp:BoundField DataField="datetime" HeaderText="发布时间">
                                 <FooterStyle HorizontalAlign="Center" />

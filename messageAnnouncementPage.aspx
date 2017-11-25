@@ -89,12 +89,12 @@
 				</div>
 			</div>
 			<div id="main">
-                <asp:GridView ID="messageAnnouncementGridView" Width="100%" runat="server" AutoGenerateColumns="False">
+                <asp:GridView ID="messageAnnouncementGridView" Width="90%" runat="server" AutoGenerateColumns="False">
                         <Columns>
                             <asp:BoundField DataField="title" HeaderText="公告标题">
                                 <FooterStyle HorizontalAlign="Center" />
-                                <HeaderStyle HorizontalAlign="Center" />
-                                <ItemStyle HorizontalAlign="Center" />
+                                <HeaderStyle HorizontalAlign="Left" />
+                                <ItemStyle HorizontalAlign="Left" />
                             </asp:BoundField>
                             <asp:BoundField DataField="datetime" HeaderText="发布时间">
                                 <FooterStyle HorizontalAlign="Center" />
@@ -103,7 +103,7 @@
                             </asp:BoundField>
                             <asp:TemplateField ShowHeader="False">
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" CommandName=""  Text="查看详情" OnClick="LinkButton1_Click"></asp:LinkButton>
+                                    <asp:LinkButton ID="LinkButton1" CssClass="linkbutton_style" runat="server" CausesValidation="false" CommandName=""  Text="查看详情" OnClick="LinkButton1_Click"></asp:LinkButton>
                                 </ItemTemplate>
                                 <ItemStyle HorizontalAlign="Center" />
                             </asp:TemplateField>
