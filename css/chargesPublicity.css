@@ -1,2 +1,7 @@
-﻿body {
+﻿#main{
+    width:100%;
+}
+
+#chargesPublicityGridView{
+    margin-left:5%;
 }
