@@ -15,7 +15,12 @@ public partial class showmessage : System.Web.UI.Page
     SqlConnection objConnection = new SqlConnection();
     protected void Page_Load(object sender, EventArgs e)
     {
-        objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
+        if (Session["username"]!=null)
+        {
+            delete.Visible = true;
+        }
+
+            objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         objConnection.Open();
         //word转html
         String Sq1 = "Select path From announcement Where title = '" + (String)Session["name"] + "'";
@@ -33,7 +38,7 @@ public partial class showmessage : System.Web.UI.Page
         objConnection.Close();
     }
 
-
+    //下载雷
     public void DownLoadFile(string FullFileName)
     {
         // 保存文件的虚拟路径
@@ -55,6 +60,24 @@ public partial class showmessage : System.Web.UI.Page
             Response.End();
         }
     }
+    //删除类
+    public void DeleteFile(string FullFileName)
+    {
+        // 保存文件的虚拟路径
+        string Url = "announcement\\" + FullFileName;
+        // 保存文件的物理路径
+        string FullPath = HttpContext.Current.Server.MapPath(Url);
+        // 去除文件的只读属性
+        //File.SetAttributes(FullPath, FileAttributes.Normal);
+        // 初始化FileInfo类的实例，作为文件路径的包装
+        FileInfo FI = new FileInfo(FullPath);
+        // 判断文件是否存在
+        if (FI.Exists)
+        {
+            FI.Delete();
+        }
+    }
+
     protected void homePage_Click(object sender, EventArgs e)
     {
         Response.Redirect("home.aspx");
@@ -121,5 +144,28 @@ public partial class showmessage : System.Web.UI.Page
         }
         */
         Response.Redirect("announcement/max.html");
+    }
+
+    protected void delete_Click(object sender, EventArgs e)
+    {
+        objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
+        objConnection.Open();
+        String SqlStr = "Select documentname From announcement Where title = '" + (String)Session["name"] + "'";
+        SqlCommand cmd = new SqlCommand(SqlStr, objConnection);
+        String FullFileName = (String)cmd.ExecuteScalar();
+        objConnection.Close();
+        DeleteFile(FullFileName);
+        //Response.Redirect(Request.Url.PathAndQuery.ToString());
+        Response.Write("<script>alert('文件成功删除')</script>");
+        //删除数据库
+        objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
+        objConnection.Open();
+        String SqlStr2 = "delete  from announcement where title='" + (String)Session["name"] + "'" ;
+        SqlCommand cmd2 = new SqlCommand(SqlStr2, objConnection);
+        cmd2.CommandText = SqlStr2;
+        cmd2.ExecuteScalar();
+        objConnection.Close();
+        Session["name"] = null;
+        Response.Redirect("home.aspx");
     }
 }

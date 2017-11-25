@@ -99,6 +99,10 @@
                     
                     <asp:Button ID="download" runat="server" Text="文档下载" OnClick="download_Click" />
                 </div>
+                 <div class="text_buttom">
+                    
+                    <asp:Button ID="delete" runat="server" Text="文档删除" OnClick="delete_Click" Visible="False"  />
+                </div>
 			</div>
 			<div class="clear"></div>
 		</div>
