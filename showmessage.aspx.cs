@@ -17,6 +17,13 @@ public partial class showmessage : System.Web.UI.Page
     {
         objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         objConnection.Open();
+        //word转html
+        String Sq1 = "Select path From announcement Where title = '" + (String)Session["name"] + "'";
+        SqlCommand cmd = new SqlCommand(Sq1, objConnection);
+        String mm = (String)cmd.ExecuteScalar();
+        Button btn = sender as Button;
+        Office2HtmlHelper.Word2Html(mm, MapPath("/announcement/"), "max");
+  
 
         String Sq = "Select title From announcement Where title = '" + (String)Session["name"] + "'";
         SqlCommand cmd1 = new SqlCommand(Sq, objConnection);
@@ -92,6 +99,7 @@ public partial class showmessage : System.Web.UI.Page
 
     protected void btnWord_Click(object sender, EventArgs e)
     {
+        /*
         objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         objConnection.Open();
 
@@ -111,6 +119,7 @@ public partial class showmessage : System.Web.UI.Page
             default:
                 break;
         }
+        */
         Response.Redirect("announcement/max.html");
     }
 }
